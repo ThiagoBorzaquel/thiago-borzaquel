@@ -34,6 +34,41 @@
       min-height: 100vh;
     }
 
+    /* ── LANG SWITCHER ── */
+    .lang-switcher {
+      display: flex;
+      gap: 4px;
+      margin-bottom: 28px;
+    }
+
+    .lang-btn {
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.15);
+      color: rgba(255,255,255,0.55);
+      font-family: 'Inter', sans-serif;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      padding: 5px 10px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: all 0.2s;
+      display: flex; align-items: center; gap: 5px;
+    }
+
+    .lang-btn:hover {
+      background: rgba(255,255,255,0.14);
+      color: rgba(255,255,255,0.85);
+    }
+
+    .lang-btn.active {
+      background: var(--gold);
+      border-color: var(--gold);
+      color: var(--navy);
+    }
+
+    .lang-flag { font-size: 13px; }
+
     /* ── LAYOUT ── */
     .layout {
       display: flex;
@@ -81,13 +116,13 @@
       color: var(--gold-light);
       letter-spacing: 0.08em;
       text-transform: uppercase;
-      margin-bottom: 32px;
+      margin-bottom: 28px;
     }
 
     .sidebar-divider {
       height: 1px;
       background: rgba(255,255,255,0.12);
-      margin-bottom: 28px;
+      margin-bottom: 24px;
     }
 
     .sidebar-section-label {
@@ -99,7 +134,7 @@
       margin-bottom: 14px;
     }
 
-    .contact-list { list-style: none; margin-bottom: 32px; }
+    .contact-list { list-style: none; margin-bottom: 28px; }
     .contact-list li {
       display: flex; align-items: flex-start; gap: 10px;
       color: rgba(255,255,255,0.75);
@@ -115,7 +150,7 @@
     .contact-list a { color: inherit; text-decoration: none; }
     .contact-list a:hover { color: var(--gold-light); }
 
-    .nav-links { list-style: none; }
+    .nav-links { list-style: none; margin-bottom: 24px; }
     .nav-links li { margin-bottom: 4px; }
     .nav-links a {
       display: block;
@@ -135,7 +170,7 @@
 
     .sidebar-years {
       margin-top: auto;
-      padding-top: 32px;
+      padding-top: 24px;
       text-align: center;
     }
     .sidebar-years .num {
@@ -210,9 +245,7 @@
     }
 
     /* ── SECTION ── */
-    .section {
-      margin-bottom: 60px;
-    }
+    .section { margin-bottom: 60px; }
 
     .section-header {
       display: flex; align-items: center; gap: 16px;
@@ -224,6 +257,7 @@
       font-size: 24px;
       font-weight: 700;
       color: var(--navy);
+      white-space: nowrap;
     }
 
     .section-line {
@@ -321,9 +355,7 @@
       transition: transform 0.2s;
     }
 
-    .timeline-item:hover .dot {
-      transform: scale(1.3);
-    }
+    .timeline-item:hover .dot { transform: scale(1.3); }
 
     .timeline-card {
       flex: 1;
@@ -374,10 +406,7 @@
       flex-shrink: 0;
     }
 
-    .timeline-list {
-      margin-top: 14px;
-      list-style: none;
-    }
+    .timeline-list { margin-top: 14px; list-style: none; }
 
     .timeline-list li {
       position: relative;
@@ -398,7 +427,7 @@
       opacity: 0.7;
     }
 
-    /* ── EDUCATION & CERTS ── */
+    /* ── EDUCATION ── */
     .edu-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -414,9 +443,7 @@
       transition: box-shadow 0.2s;
     }
 
-    .edu-card:hover {
-      box-shadow: 0 4px 16px rgba(30,58,95,0.07);
-    }
+    .edu-card:hover { box-shadow: 0 4px 16px rgba(30,58,95,0.07); }
 
     .edu-badge {
       width: 40px; height: 40px;
@@ -436,10 +463,7 @@
       line-height: 1.35;
     }
 
-    .edu-institution {
-      font-size: 12.5px;
-      color: var(--muted);
-    }
+    .edu-institution { font-size: 12.5px; color: var(--muted); }
 
     /* ── CERTS ── */
     .cert-grid {
@@ -496,12 +520,7 @@
     }
 
     .diff-check svg { width: 13px; height: 13px; }
-
-    .diff-text {
-      font-size: 14px;
-      color: #4A5568;
-      line-height: 1.5;
-    }
+    .diff-text { font-size: 14px; color: #4A5568; line-height: 1.5; }
 
     /* ── FOOTER ── */
     .footer {
@@ -519,10 +538,7 @@
       color: var(--navy);
     }
 
-    .footer-right {
-      font-size: 12px;
-      color: var(--muted);
-    }
+    .footer-right { font-size: 12px; color: var(--muted); }
 
     .print-btn {
       display: inline-flex; align-items: center; gap: 8px;
@@ -579,6 +595,31 @@
       color: #FFFFFF;
     }
 
+    .mobile-header-right {
+      display: flex; align-items: center; gap: 10px;
+    }
+
+    /* Lang switcher compacto para mobile header */
+    .lang-switcher-mobile {
+      display: flex; gap: 3px;
+    }
+
+    .lang-btn-sm {
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.15);
+      color: rgba(255,255,255,0.6);
+      font-family: 'Inter', sans-serif;
+      font-size: 11px;
+      font-weight: 600;
+      padding: 4px 7px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .lang-btn-sm:hover { color: #fff; background: rgba(255,255,255,0.18); }
+    .lang-btn-sm.active { background: var(--gold); border-color: var(--gold); color: var(--navy); }
+
     .mobile-hamburger {
       background: none;
       border: none;
@@ -613,15 +654,13 @@
       box-shadow: 0 8px 24px rgba(0,0,0,0.2);
     }
 
-    .mobile-drawer.open {
-      transform: translateY(0);
-    }
-
+    .mobile-drawer.open { transform: translateY(0); }
     .mobile-drawer .contact-list { margin-bottom: 20px; }
 
     .mobile-drawer .nav-links {
       display: flex; flex-wrap: wrap; gap: 8px;
       list-style: none;
+      margin-bottom: 0;
     }
 
     .mobile-drawer .nav-links li { margin: 0; }
@@ -654,7 +693,6 @@
     /* ── RESPONSIVE ── */
     @media (max-width: 860px) {
       .sidebar { display: none; }
-
       .mobile-header { display: flex; }
       .mobile-drawer { display: block; }
       .drawer-overlay { display: block; opacity: 0; pointer-events: none; transition: opacity 0.3s; }
@@ -702,6 +740,7 @@
     /* ── PRINT ── */
     @media print {
       .sidebar { display: none; }
+      .mobile-header { display: none; }
       .main { margin-left: 0; max-width: 100%; padding: 20px 30px; }
       .print-btn { display: none; }
       .timeline::before { display: none; }
@@ -731,11 +770,24 @@
   <aside class="sidebar">
     <div class="sidebar-avatar">TB</div>
     <div class="sidebar-name">Thiago Sant'Ana Borzaquel</div>
-    <div class="sidebar-role">Analista de Projetos & Gestão Financeira</div>
+    <div class="sidebar-role" data-i18n="role"></div>
 
     <div class="sidebar-divider"></div>
 
-    <div class="sidebar-section-label">Contato</div>
+    <!-- LANG SWITCHER DESKTOP -->
+    <div class="lang-switcher">
+      <button class="lang-btn active" onclick="setLang('pt')" id="btn-pt-desk">
+        <span class="lang-flag">🇧🇷</span> PT
+      </button>
+      <button class="lang-btn" onclick="setLang('en')" id="btn-en-desk">
+        <span class="lang-flag">🇺🇸</span> EN
+      </button>
+      <button class="lang-btn" onclick="setLang('es')" id="btn-es-desk">
+        <span class="lang-flag">🇪🇸</span> ES
+      </button>
+    </div>
+
+    <div class="sidebar-section-label" data-i18n="contact"></div>
     <ul class="contact-list">
       <li>
         <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
@@ -751,19 +803,19 @@
       </li>
     </ul>
 
-    <div class="sidebar-section-label">Navegação</div>
+    <div class="sidebar-section-label" data-i18n="navLabel"></div>
     <ul class="nav-links">
-      <li><a href="#resumo">Resumo</a></li>
-      <li><a href="#competencias">Competências</a></li>
-      <li><a href="#experiencia">Experiência</a></li>
-      <li><a href="#formacao">Formação</a></li>
-      <li><a href="#certificacoes">Certificações</a></li>
-      <li><a href="#diferenciais">Diferenciais</a></li>
+      <li><a href="#resumo" data-i18n="nav_summary"></a></li>
+      <li><a href="#competencias" data-i18n="nav_skills"></a></li>
+      <li><a href="#experiencia" data-i18n="nav_experience"></a></li>
+      <li><a href="#formacao" data-i18n="nav_education"></a></li>
+      <li><a href="#certificacoes" data-i18n="nav_certs"></a></li>
+      <li><a href="#diferenciais" data-i18n="nav_highlights"></a></li>
     </ul>
 
     <div class="sidebar-years">
       <div class="num">15+</div>
-      <div class="label">Anos de experiência</div>
+      <div class="label" data-i18n="yearsLabel"></div>
     </div>
   </aside>
 
@@ -772,25 +824,16 @@
 
     <!-- HERO -->
     <section class="hero" id="resumo">
-      <div class="hero-eyebrow">Currículo Profissional</div>
+      <div class="hero-eyebrow" data-i18n="eyebrow"></div>
       <h1>Thiago<br>Borzaquel</h1>
-      <p class="hero-summary">
-        Profissional com mais de 15 anos de experiência em gestão financeira de projetos, operações, administração, logística e tecnologia da informação. Combina visão analítica, organização e foco em resultados com facilidade de adaptação a novas tecnologias — incluindo ferramentas de Inteligência Artificial para automação e apoio à decisão.
-      </p>
-      <div class="hero-badges">
-        <span class="badge">Fluxo de Caixa</span>
-        <span class="badge">Controle Orçamentário</span>
-        <span class="badge">KPIs</span>
-        <span class="badge">Gestão de Projetos</span>
-        <span class="badge">Inteligência Artificial</span>
-        <span class="badge">Melhoria Contínua</span>
-      </div>
+      <p class="hero-summary" data-i18n="summary"></p>
+      <div class="hero-badges" id="hero-badges"></div>
     </section>
 
     <!-- COMPETÊNCIAS -->
     <section class="section" id="competencias">
       <div class="section-header">
-        <h2>Competências</h2>
+        <h2 data-i18n="sec_skills"></h2>
         <div class="section-line"></div>
       </div>
       <div class="skills-grid">
@@ -799,49 +842,24 @@
           <div class="skill-card-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
           </div>
-          <h3>Financeiro & Projetos</h3>
-          <div class="skill-tags">
-            <span class="skill-tag">Gestão Financeira</span>
-            <span class="skill-tag">Controle Orçamentário</span>
-            <span class="skill-tag">Fluxo de Caixa</span>
-            <span class="skill-tag">Prestação de Contas</span>
-            <span class="skill-tag">Pagamentos</span>
-            <span class="skill-tag">Relatórios Gerenciais</span>
-            <span class="skill-tag">KPIs</span>
-            <span class="skill-tag">Planejamento Financeiro</span>
-          </div>
+          <h3 data-i18n="skill1_title"></h3>
+          <div class="skill-tags" id="skill1-tags"></div>
         </div>
 
         <div class="skill-card">
           <div class="skill-card-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
           </div>
-          <h3>Administração & Ops</h3>
-          <div class="skill-tags">
-            <span class="skill-tag">Gestão de Processos</span>
-            <span class="skill-tag">Melhoria Contínua</span>
-            <span class="skill-tag">Planejamento Operacional</span>
-            <span class="skill-tag">Controle Administrativo</span>
-            <span class="skill-tag">Liderança de Equipes</span>
-            <span class="skill-tag">Atendimento a Clientes</span>
-          </div>
+          <h3 data-i18n="skill2_title"></h3>
+          <div class="skill-tags" id="skill2-tags"></div>
         </div>
 
         <div class="skill-card">
           <div class="skill-card-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
           </div>
-          <h3>Tecnologia & IA</h3>
-          <div class="skill-tags">
-            <span class="skill-tag">ChatGPT</span>
-            <span class="skill-tag">Claude</span>
-            <span class="skill-tag">Codex</span>
-            <span class="skill-tag">Lovable</span>
-            <span class="skill-tag">Microsoft Office</span>
-            <span class="skill-tag">ERP TOTVS</span>
-            <span class="skill-tag">WinThor</span>
-            <span class="skill-tag">Infraestrutura TI</span>
-          </div>
+          <h3 data-i18n="skill3_title"></h3>
+          <div class="skill-tags" id="skill3-tags"></div>
         </div>
 
       </div>
@@ -850,228 +868,37 @@
     <!-- EXPERIÊNCIA -->
     <section class="section" id="experiencia">
       <div class="section-header">
-        <h2>Experiência Profissional</h2>
+        <h2 data-i18n="sec_experience"></h2>
         <div class="section-line"></div>
       </div>
-      <div class="timeline">
-
-        <div class="timeline-item">
-          <div class="timeline-dot"><div class="dot"></div></div>
-          <div class="timeline-card">
-            <div class="timeline-company">Instituto Singular Ideias Inovadoras</div>
-            <div class="timeline-header">
-              <div class="timeline-role">Analista de Projetos – Gestão Financeira</div>
-              <span class="timeline-period">Mar/2022 – Mar/2026</span>
-            </div>
-            <ul class="timeline-list">
-              <li>Gestão financeira e administrativa de projetos sociais e educacionais.</li>
-              <li>Controle de fluxo de caixa, orçamento e execução financeira dos projetos.</li>
-              <li>Programação e acompanhamento de pagamentos.</li>
-              <li>Prestação de contas e elaboração de relatórios financeiros.</li>
-              <li>Controle de despesas e acompanhamento de indicadores financeiros.</li>
-              <li>Suporte à coordenação dos projetos e apoio à tomada de decisão.</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="timeline-item">
-          <div class="timeline-dot"><div class="dot"></div></div>
-          <div class="timeline-card">
-            <div class="timeline-company">Profissional Autônomo (MEI)</div>
-            <div class="timeline-header">
-              <div class="timeline-role">Consultor de TI e Infraestrutura</div>
-              <span class="timeline-period">Jun/2018 – Fev/2022</span>
-            </div>
-            <ul class="timeline-list">
-              <li>Suporte técnico e infraestrutura para empresas de diversos segmentos.</li>
-              <li>Instalação, configuração e manutenção de computadores, redes e equipamentos.</li>
-              <li>Administração de ambientes Windows.</li>
-              <li>Diagnóstico e resolução de incidentes de hardware e software.</li>
-              <li>Atendimento e relacionamento com clientes corporativos.</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="timeline-item">
-          <div class="timeline-dot"><div class="dot"></div></div>
-          <div class="timeline-card">
-            <div class="timeline-company">Rede D'Or São Luiz</div>
-            <div class="timeline-header">
-              <div class="timeline-role">Assistente de Gerência</div>
-              <span class="timeline-period">Set/2017 – Mai/2018</span>
-            </div>
-            <ul class="timeline-list">
-              <li>Gestão administrativa do Centro Cirúrgico.</li>
-              <li>Coordenação de escalas, controle de ponto e apoio à gestão de equipes.</li>
-              <li>Controle de materiais, equipamentos e suprimentos.</li>
-              <li>Desenvolvimento de indicadores de desempenho e melhoria de processos.</li>
-              <li>Utilização dos sistemas TOTVS e Conecta D'Or.</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="timeline-item">
-          <div class="timeline-dot"><div class="dot"></div></div>
-          <div class="timeline-card">
-            <div class="timeline-company">Nimbi</div>
-            <div class="timeline-header">
-              <div class="timeline-role">Líder Operacional</div>
-              <span class="timeline-period">Nov/2012 – Jun/2017</span>
-            </div>
-            <ul class="timeline-list">
-              <li>Coordenação da célula de ocorrências.</li>
-              <li>Desenvolvimento e monitoramento de KPIs.</li>
-              <li>Auditoria e melhoria de processos operacionais.</li>
-              <li>Gestão de performance e relacionamento com clientes, fornecedores e equipe comercial.</li>
-              <li>Desenvolvimento de painéis de controle e acompanhamento de resultados.</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="timeline-item">
-          <div class="timeline-dot"><div class="dot" style="background:#CBD5E0; box-shadow:0 0 0 2px #CBD5E0;"></div></div>
-          <div class="timeline-card">
-            <div class="timeline-company">Frigoforte Logística</div>
-            <div class="timeline-header">
-              <div class="timeline-role">Auxiliar de Logística</div>
-              <span class="timeline-period">Abr/2011 – Set/2011</span>
-            </div>
-            <ul class="timeline-list">
-              <li>Faturamento e emissão de NF-e.</li>
-              <li>Controle documental, administrativo e de estoque.</li>
-              <li>Elaboração de relatórios operacionais.</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="timeline-item">
-          <div class="timeline-dot"><div class="dot" style="background:#CBD5E0; box-shadow:0 0 0 2px #CBD5E0;"></div></div>
-          <div class="timeline-card">
-            <div class="timeline-company">Conlog (Ambev)</div>
-            <div class="timeline-header">
-              <div class="timeline-role">Auxiliar Administrativo</div>
-              <span class="timeline-period">Abr/2010 – Nov/2010</span>
-            </div>
-            <ul class="timeline-list">
-              <li>Monitoramento de rotas e prestação de contas.</li>
-              <li>Controle de relatórios operacionais.</li>
-              <li>Atendimento interno e externo.</li>
-            </ul>
-          </div>
-        </div>
-
-      </div>
+      <div class="timeline" id="timeline"></div>
     </section>
 
     <!-- FORMAÇÃO -->
     <section class="section" id="formacao">
       <div class="section-header">
-        <h2>Formação Acadêmica</h2>
+        <h2 data-i18n="sec_education"></h2>
         <div class="section-line"></div>
       </div>
-      <div class="edu-grid">
-
-        <div class="edu-card">
-          <div class="edu-badge">
-            <svg viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
-          </div>
-          <div>
-            <div class="edu-title">Bacharelado em Análise de Sistemas</div>
-            <div class="edu-institution">Universidade Estácio de Sá · Concluído</div>
-          </div>
-        </div>
-
-        <div class="edu-card">
-          <div class="edu-badge">
-            <svg viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
-          </div>
-          <div>
-            <div class="edu-title">Técnico em Informática</div>
-            <div class="edu-institution">Escola Técnica Electra · Concluído</div>
-          </div>
-        </div>
-
-      </div>
+      <div class="edu-grid" id="edu-grid"></div>
     </section>
 
     <!-- CERTIFICAÇÕES -->
     <section class="section" id="certificacoes">
       <div class="section-header">
-        <h2>Cursos & Certificações</h2>
+        <h2 data-i18n="sec_certs"></h2>
         <div class="section-line"></div>
       </div>
-      <div class="cert-grid">
-        <div class="cert-item">
-          <div class="cert-org">FGV</div>
-          <div class="cert-name">Gerenciamento do Escopo de Projetos</div>
-        </div>
-        <div class="cert-item">
-          <div class="cert-org">FGV</div>
-          <div class="cert-name">Qualidade em Serviços</div>
-        </div>
-        <div class="cert-item">
-          <div class="cert-org">Sebrae</div>
-          <div class="cert-name">Análise e Planejamento Financeiro</div>
-        </div>
-        <div class="cert-item">
-          <div class="cert-org">Sebrae</div>
-          <div class="cert-name">Gestão da Qualidade: Visão Estratégica</div>
-        </div>
-        <div class="cert-item">
-          <div class="cert-org">Tecnologia</div>
-          <div class="cert-name">Python · Django Framework</div>
-        </div>
-        <div class="cert-item">
-          <div class="cert-org">Tecnologia</div>
-          <div class="cert-name">Java · HTML · Inglês Técnico</div>
-        </div>
-      </div>
+      <div class="cert-grid" id="cert-grid"></div>
     </section>
 
     <!-- DIFERENCIAIS -->
     <section class="section" id="diferenciais">
       <div class="section-header">
-        <h2>Diferenciais Profissionais</h2>
+        <h2 data-i18n="sec_highlights"></h2>
         <div class="section-line"></div>
       </div>
-      <div class="diff-grid">
-        <div class="diff-item">
-          <div class="diff-check">
-            <svg viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-          </div>
-          <div class="diff-text">Mais de 15 anos de experiência profissional consolidada.</div>
-        </div>
-        <div class="diff-item">
-          <div class="diff-check">
-            <svg viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-          </div>
-          <div class="diff-text">Experiência em empresas privadas, terceiro setor e prestação de serviços.</div>
-        </div>
-        <div class="diff-item">
-          <div class="diff-check">
-            <svg viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-          </div>
-          <div class="diff-text">Forte capacidade analítica, organizacional e foco em resultados.</div>
-        </div>
-        <div class="diff-item">
-          <div class="diff-check">
-            <svg viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-          </div>
-          <div class="diff-text">Facilidade de adaptação a novas tecnologias e sistemas.</div>
-        </div>
-        <div class="diff-item">
-          <div class="diff-check">
-            <svg viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-          </div>
-          <div class="diff-text">Uso prático de IA (ChatGPT, Claude, Codex) para otimização e produtividade.</div>
-        </div>
-        <div class="diff-item">
-          <div class="diff-check">
-            <svg viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-          </div>
-          <div class="diff-text">Perfil colaborativo, orientado à melhoria contínua de processos.</div>
-        </div>
-      </div>
+      <div class="diff-grid" id="diff-grid"></div>
     </section>
 
     <!-- FOOTER -->
@@ -1079,7 +906,7 @@
       <div class="footer-left">Thiago Borzaquel</div>
       <button class="print-btn" onclick="window.print()">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
-        Imprimir / Salvar PDF
+        <span data-i18n="printBtn"></span>
       </button>
       <div class="footer-right">thiago.borzaquel@hotmail.com · (21) 99639-6102</div>
     </footer>
@@ -1093,14 +920,21 @@
     <div class="mobile-avatar">TB</div>
     <div class="mobile-name">Thiago Borzaquel</div>
   </div>
-  <button class="mobile-hamburger" id="hamburger" aria-label="Menu">
-    <span></span><span></span><span></span>
-  </button>
+  <div class="mobile-header-right">
+    <div class="lang-switcher-mobile">
+      <button class="lang-btn-sm active" onclick="setLang('pt')" id="btn-pt-mob">🇧🇷</button>
+      <button class="lang-btn-sm" onclick="setLang('en')" id="btn-en-mob">🇺🇸</button>
+      <button class="lang-btn-sm" onclick="setLang('es')" id="btn-es-mob">🇪🇸</button>
+    </div>
+    <button class="mobile-hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
 </header>
 
 <!-- ═══ MOBILE DRAWER ═══ -->
 <nav class="mobile-drawer" id="drawer">
-  <div class="sidebar-section-label" style="margin-bottom:12px;">Contato</div>
+  <div class="sidebar-section-label" style="margin-bottom:12px;" data-i18n="contact"></div>
   <ul class="contact-list">
     <li>
       <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
@@ -1115,47 +949,531 @@
       <a href="mailto:thiago.borzaquel@hotmail.com">thiago.borzaquel@hotmail.com</a>
     </li>
   </ul>
-  <div class="sidebar-section-label" style="margin-bottom:12px;">Seções</div>
+  <div class="sidebar-section-label" style="margin-bottom:12px;" data-i18n="navLabel"></div>
   <ul class="nav-links">
-    <li><a href="#resumo" class="drawer-link">Resumo</a></li>
-    <li><a href="#competencias" class="drawer-link">Competências</a></li>
-    <li><a href="#experiencia" class="drawer-link">Experiência</a></li>
-    <li><a href="#formacao" class="drawer-link">Formação</a></li>
-    <li><a href="#certificacoes" class="drawer-link">Certificações</a></li>
-    <li><a href="#diferenciais" class="drawer-link">Diferenciais</a></li>
+    <li><a href="#resumo" class="drawer-link" data-i18n="nav_summary"></a></li>
+    <li><a href="#competencias" class="drawer-link" data-i18n="nav_skills"></a></li>
+    <li><a href="#experiencia" class="drawer-link" data-i18n="nav_experience"></a></li>
+    <li><a href="#formacao" class="drawer-link" data-i18n="nav_education"></a></li>
+    <li><a href="#certificacoes" class="drawer-link" data-i18n="nav_certs"></a></li>
+    <li><a href="#diferenciais" class="drawer-link" data-i18n="nav_highlights"></a></li>
   </ul>
 </nav>
 
 <div class="drawer-overlay" id="overlay"></div>
 
 <script>
-  // Scroll-reveal animation
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry, i) => {
-      if (entry.isIntersecting) {
-        setTimeout(() => entry.target.classList.add('visible'), i * 60);
-        observer.unobserve(entry.target);
+/* ════════════════════════════════════════
+   TRANSLATIONS
+════════════════════════════════════════ */
+const i18n = {
+  pt: {
+    role: "Analista de Projetos & Gestão Financeira",
+    contact: "Contato",
+    navLabel: "Navegação",
+    nav_summary: "Resumo",
+    nav_skills: "Competências",
+    nav_experience: "Experiência",
+    nav_education: "Formação",
+    nav_certs: "Certificações",
+    nav_highlights: "Diferenciais",
+    yearsLabel: "Anos de experiência",
+    eyebrow: "Currículo Profissional",
+    summary: "Profissional com mais de 15 anos de experiência em gestão financeira de projetos, operações, administração, logística e tecnologia da informação. Combina visão analítica, organização e foco em resultados com facilidade de adaptação a novas tecnologias — incluindo ferramentas de Inteligência Artificial para automação e apoio à decisão.",
+    badges: ["Fluxo de Caixa", "Controle Orçamentário", "KPIs", "Gestão de Projetos", "Inteligência Artificial", "Melhoria Contínua"],
+    sec_skills: "Competências",
+    skill1_title: "Financeiro & Projetos",
+    skill1_tags: ["Gestão Financeira", "Controle Orçamentário", "Fluxo de Caixa", "Prestação de Contas", "Pagamentos", "Relatórios Gerenciais", "KPIs", "Planejamento Financeiro"],
+    skill2_title: "Administração & Ops",
+    skill2_tags: ["Gestão de Processos", "Melhoria Contínua", "Planejamento Operacional", "Controle Administrativo", "Liderança de Equipes", "Atendimento a Clientes"],
+    skill3_title: "Tecnologia & IA",
+    skill3_tags: ["ChatGPT", "Claude", "Codex", "Lovable", "Microsoft Office", "ERP TOTVS", "WinThor", "Infraestrutura TI"],
+    sec_experience: "Experiência Profissional",
+    jobs: [
+      {
+        company: "Instituto Singular Ideias Inovadoras",
+        role: "Analista de Projetos – Gestão Financeira",
+        period: "Mar/2022 – Mar/2026",
+        items: [
+          "Gestão financeira e administrativa de projetos sociais e educacionais.",
+          "Controle de fluxo de caixa, orçamento e execução financeira dos projetos.",
+          "Programação e acompanhamento de pagamentos.",
+          "Prestação de contas e elaboração de relatórios financeiros.",
+          "Controle de despesas e acompanhamento de indicadores financeiros.",
+          "Suporte à coordenação dos projetos e apoio à tomada de decisão."
+        ]
+      },
+      {
+        company: "Profissional Autônomo (MEI)",
+        role: "Consultor de TI e Infraestrutura",
+        period: "Jun/2018 – Fev/2022",
+        items: [
+          "Suporte técnico e infraestrutura para empresas de diversos segmentos.",
+          "Instalação, configuração e manutenção de computadores, redes e equipamentos.",
+          "Administração de ambientes Windows.",
+          "Diagnóstico e resolução de incidentes de hardware e software.",
+          "Atendimento e relacionamento com clientes corporativos."
+        ]
+      },
+      {
+        company: "Rede D'Or São Luiz",
+        role: "Assistente de Gerência",
+        period: "Set/2017 – Mai/2018",
+        items: [
+          "Gestão administrativa do Centro Cirúrgico.",
+          "Coordenação de escalas, controle de ponto e apoio à gestão de equipes.",
+          "Controle de materiais, equipamentos e suprimentos.",
+          "Desenvolvimento de indicadores de desempenho e melhoria de processos.",
+          "Utilização dos sistemas TOTVS e Conecta D'Or."
+        ]
+      },
+      {
+        company: "Nimbi",
+        role: "Líder Operacional",
+        period: "Nov/2012 – Jun/2017",
+        items: [
+          "Coordenação da célula de ocorrências.",
+          "Desenvolvimento e monitoramento de KPIs.",
+          "Auditoria e melhoria de processos operacionais.",
+          "Gestão de performance e relacionamento com clientes, fornecedores e equipe comercial.",
+          "Desenvolvimento de painéis de controle e acompanhamento de resultados."
+        ]
+      },
+      {
+        company: "Frigoforte Logística",
+        role: "Auxiliar de Logística",
+        period: "Abr/2011 – Set/2011",
+        faded: true,
+        items: [
+          "Faturamento e emissão de NF-e.",
+          "Controle documental, administrativo e de estoque.",
+          "Elaboração de relatórios operacionais."
+        ]
+      },
+      {
+        company: "Conlog (Ambev)",
+        role: "Auxiliar Administrativo",
+        period: "Abr/2010 – Nov/2010",
+        faded: true,
+        items: [
+          "Monitoramento de rotas e prestação de contas.",
+          "Controle de relatórios operacionais.",
+          "Atendimento interno e externo."
+        ]
       }
-    });
-  }, { threshold: 0.1 });
+    ],
+    sec_education: "Formação Acadêmica",
+    education: [
+      { title: "Bacharelado em Análise de Sistemas", institution: "Universidade Estácio de Sá · Concluído", icon: "degree" },
+      { title: "Técnico em Informática", institution: "Escola Técnica Electra · Concluído", icon: "tech" }
+    ],
+    sec_certs: "Cursos & Certificações",
+    certs: [
+      { org: "FGV", name: "Gerenciamento do Escopo de Projetos" },
+      { org: "FGV", name: "Qualidade em Serviços" },
+      { org: "Sebrae", name: "Análise e Planejamento Financeiro" },
+      { org: "Sebrae", name: "Gestão da Qualidade: Visão Estratégica" },
+      { org: "Tecnologia", name: "Python · Django Framework" },
+      { org: "Tecnologia", name: "Java · HTML · Inglês Técnico" }
+    ],
+    sec_highlights: "Diferenciais Profissionais",
+    highlights: [
+      "Mais de 15 anos de experiência profissional consolidada.",
+      "Experiência em empresas privadas, terceiro setor e prestação de serviços.",
+      "Forte capacidade analítica, organizacional e foco em resultados.",
+      "Facilidade de adaptação a novas tecnologias e sistemas.",
+      "Uso prático de IA (ChatGPT, Claude, Codex) para otimização e produtividade.",
+      "Perfil colaborativo, orientado à melhoria contínua de processos."
+    ],
+    printBtn: "Imprimir / Salvar PDF"
+  },
 
+  en: {
+    role: "Project Analyst & Financial Management",
+    contact: "Contact",
+    navLabel: "Navigation",
+    nav_summary: "Summary",
+    nav_skills: "Skills",
+    nav_experience: "Experience",
+    nav_education: "Education",
+    nav_certs: "Certifications",
+    nav_highlights: "Highlights",
+    yearsLabel: "Years of experience",
+    eyebrow: "Professional Resume",
+    summary: "Professional with over 15 years of experience in project financial management, operations, administration, logistics, and information technology. Combines analytical vision, organization, and results focus with adaptability to new technologies — including Artificial Intelligence tools for automation and decision support.",
+    badges: ["Cash Flow", "Budget Control", "KPIs", "Project Management", "Artificial Intelligence", "Continuous Improvement"],
+    sec_skills: "Skills",
+    skill1_title: "Finance & Projects",
+    skill1_tags: ["Financial Management", "Budget Control", "Cash Flow", "Accountability", "Payment Management", "Managerial Reports", "KPIs", "Financial Planning"],
+    skill2_title: "Administration & Ops",
+    skill2_tags: ["Process Management", "Continuous Improvement", "Operational Planning", "Administrative Control", "Team Leadership", "Client Relations"],
+    skill3_title: "Technology & AI",
+    skill3_tags: ["ChatGPT", "Claude", "Codex", "Lovable", "Microsoft Office", "ERP TOTVS", "WinThor", "IT Infrastructure"],
+    sec_experience: "Professional Experience",
+    jobs: [
+      {
+        company: "Instituto Singular Ideias Inovadoras",
+        role: "Project Analyst – Financial Management",
+        period: "Mar/2022 – Mar/2026",
+        items: [
+          "Financial and administrative management of social and educational projects.",
+          "Cash flow control, budgeting, and financial execution of projects.",
+          "Scheduling and monitoring of payments.",
+          "Accountability and preparation of financial reports.",
+          "Expense control and tracking of financial indicators.",
+          "Support to project coordination and decision-making."
+        ]
+      },
+      {
+        company: "Self-Employed (MEI)",
+        role: "IT & Infrastructure Consultant",
+        period: "Jun/2018 – Feb/2022",
+        items: [
+          "Technical support and infrastructure services for companies across various sectors.",
+          "Installation, configuration, and maintenance of computers, networks, and equipment.",
+          "Windows environment administration.",
+          "Hardware and software incident diagnosis and resolution.",
+          "Client relationship management for corporate clients."
+        ]
+      },
+      {
+        company: "Rede D'Or São Luiz",
+        role: "Management Assistant",
+        period: "Sep/2017 – May/2018",
+        items: [
+          "Administrative management of the Surgical Center.",
+          "Scheduling coordination, time control, and team management support.",
+          "Control of materials, equipment, and supplies.",
+          "Development of performance indicators and process improvement.",
+          "Use of TOTVS and Conecta D'Or systems."
+        ]
+      },
+      {
+        company: "Nimbi",
+        role: "Operations Leader",
+        period: "Nov/2012 – Jun/2017",
+        items: [
+          "Coordination of the incidents cell.",
+          "Development and monitoring of KPIs.",
+          "Audit and improvement of operational processes.",
+          "Performance management and relationships with clients, suppliers, and commercial teams.",
+          "Development of control dashboards and results tracking."
+        ]
+      },
+      {
+        company: "Frigoforte Logística",
+        role: "Logistics Assistant",
+        period: "Apr/2011 – Sep/2011",
+        faded: true,
+        items: [
+          "Invoicing and electronic invoice issuance.",
+          "Documentary, administrative, and inventory control.",
+          "Preparation of operational reports."
+        ]
+      },
+      {
+        company: "Conlog (Ambev)",
+        role: "Administrative Assistant",
+        period: "Apr/2010 – Nov/2010",
+        faded: true,
+        items: [
+          "Route monitoring and accountability.",
+          "Operational report control.",
+          "Internal and external customer service."
+        ]
+      }
+    ],
+    sec_education: "Education",
+    education: [
+      { title: "Bachelor's Degree in Systems Analysis", institution: "Universidade Estácio de Sá · Completed", icon: "degree" },
+      { title: "Technical Degree in Computer Science", institution: "Escola Técnica Electra · Completed", icon: "tech" }
+    ],
+    sec_certs: "Courses & Certifications",
+    certs: [
+      { org: "FGV", name: "Project Scope Management" },
+      { org: "FGV", name: "Quality in Services" },
+      { org: "Sebrae", name: "Financial Analysis and Planning" },
+      { org: "Sebrae", name: "Quality Management: Strategic Vision" },
+      { org: "Technology", name: "Python · Django Framework" },
+      { org: "Technology", name: "Java · HTML · Technical English" }
+    ],
+    sec_highlights: "Professional Highlights",
+    highlights: [
+      "Over 15 years of consolidated professional experience.",
+      "Experience in private companies, non-profit sector, and service provision.",
+      "Strong analytical and organizational capacity with results focus.",
+      "Ease of adaptation to new technologies and systems.",
+      "Practical use of AI (ChatGPT, Claude, Codex) for optimization and productivity.",
+      "Collaborative profile, oriented toward continuous process improvement."
+    ],
+    printBtn: "Print / Save PDF"
+  },
+
+  es: {
+    role: "Analista de Proyectos & Gestión Financiera",
+    contact: "Contacto",
+    navLabel: "Navegación",
+    nav_summary: "Resumen",
+    nav_skills: "Competencias",
+    nav_experience: "Experiencia",
+    nav_education: "Formación",
+    nav_certs: "Certificaciones",
+    nav_highlights: "Destacados",
+    yearsLabel: "Años de experiencia",
+    eyebrow: "Currículum Profesional",
+    summary: "Profesional con más de 15 años de experiencia en gestión financiera de proyectos, operaciones, administración, logística y tecnología de la información. Combina visión analítica, organización y enfoque en resultados con facilidad de adaptación a nuevas tecnologías — incluidas herramientas de Inteligencia Artificial para automatización y apoyo en la toma de decisiones.",
+    badges: ["Flujo de Caja", "Control Presupuestario", "KPIs", "Gestión de Proyectos", "Inteligencia Artificial", "Mejora Continua"],
+    sec_skills: "Competencias",
+    skill1_title: "Finanzas & Proyectos",
+    skill1_tags: ["Gestión Financiera", "Control Presupuestario", "Flujo de Caja", "Rendición de Cuentas", "Gestión de Pagos", "Informes Gerenciales", "KPIs", "Planificación Financiera"],
+    skill2_title: "Administración & Ops",
+    skill2_tags: ["Gestión de Procesos", "Mejora Continua", "Planificación Operativa", "Control Administrativo", "Liderazgo de Equipos", "Atención al Cliente"],
+    skill3_title: "Tecnología & IA",
+    skill3_tags: ["ChatGPT", "Claude", "Codex", "Lovable", "Microsoft Office", "ERP TOTVS", "WinThor", "Infraestructura TI"],
+    sec_experience: "Experiencia Profesional",
+    jobs: [
+      {
+        company: "Instituto Singular Ideias Inovadoras",
+        role: "Analista de Proyectos – Gestión Financiera",
+        period: "Mar/2022 – Mar/2026",
+        items: [
+          "Gestión financiera y administrativa de proyectos sociales y educativos.",
+          "Control de flujo de caja, presupuesto y ejecución financiera de los proyectos.",
+          "Programación y seguimiento de pagos.",
+          "Rendición de cuentas y elaboración de informes financieros.",
+          "Control de gastos y seguimiento de indicadores financieros.",
+          "Apoyo a la coordinación de proyectos y toma de decisiones."
+        ]
+      },
+      {
+        company: "Profesional Independiente (MEI)",
+        role: "Consultor de TI e Infraestructura",
+        period: "Jun/2018 – Feb/2022",
+        items: [
+          "Servicios de soporte técnico e infraestructura para empresas de diversos sectores.",
+          "Instalación, configuración y mantenimiento de computadoras, redes y equipos.",
+          "Administración de entornos Windows.",
+          "Diagnóstico y resolución de incidentes de hardware y software.",
+          "Atención y relación con clientes corporativos."
+        ]
+      },
+      {
+        company: "Rede D'Or São Luiz",
+        role: "Asistente de Gerencia",
+        period: "Sep/2017 – May/2018",
+        items: [
+          "Gestión administrativa del Centro Quirúrgico.",
+          "Coordinación de turnos, control de asistencia y apoyo a la gestión de equipos.",
+          "Control de materiales, equipos e insumos.",
+          "Desarrollo de indicadores de desempeño y mejora de procesos.",
+          "Uso de los sistemas TOTVS y Conecta D'Or."
+        ]
+      },
+      {
+        company: "Nimbi",
+        role: "Líder Operacional",
+        period: "Nov/2012 – Jun/2017",
+        items: [
+          "Coordinación de la célula de incidencias.",
+          "Desarrollo y monitoreo de KPIs.",
+          "Auditoría y mejora de procesos operativos.",
+          "Gestión del desempeño y relación con clientes, proveedores y equipo comercial.",
+          "Desarrollo de paneles de control y seguimiento de resultados."
+        ]
+      },
+      {
+        company: "Frigoforte Logística",
+        role: "Auxiliar de Logística",
+        period: "Abr/2011 – Sep/2011",
+        faded: true,
+        items: [
+          "Facturación y emisión de facturas electrónicas.",
+          "Control documental, administrativo y de inventario.",
+          "Elaboración de informes operativos."
+        ]
+      },
+      {
+        company: "Conlog (Ambev)",
+        role: "Auxiliar Administrativo",
+        period: "Abr/2010 – Nov/2010",
+        faded: true,
+        items: [
+          "Monitoreo de rutas y rendición de cuentas.",
+          "Control de informes operativos.",
+          "Atención interna y externa."
+        ]
+      }
+    ],
+    sec_education: "Formación Académica",
+    education: [
+      { title: "Licenciatura en Análisis de Sistemas", institution: "Universidade Estácio de Sá · Completado", icon: "degree" },
+      { title: "Técnico en Informática", institution: "Escola Técnica Electra · Completado", icon: "tech" }
+    ],
+    sec_certs: "Cursos & Certificaciones",
+    certs: [
+      { org: "FGV", name: "Gestión del Alcance de Proyectos" },
+      { org: "FGV", name: "Calidad en Servicios" },
+      { org: "Sebrae", name: "Análisis y Planificación Financiera" },
+      { org: "Sebrae", name: "Gestión de la Calidad: Visión Estratégica" },
+      { org: "Tecnología", name: "Python · Django Framework" },
+      { org: "Tecnología", name: "Java · HTML · Inglés Técnico" }
+    ],
+    sec_highlights: "Destacados Profesionales",
+    highlights: [
+      "Más de 15 años de experiencia profesional consolidada.",
+      "Experiencia en empresas privadas, tercer sector y prestación de servicios.",
+      "Fuerte capacidad analítica, organizacional y enfoque en resultados.",
+      "Facilidad de adaptación a nuevas tecnologías y sistemas.",
+      "Uso práctico de IA (ChatGPT, Claude, Codex) para optimización y productividad.",
+      "Perfil colaborativo, orientado a la mejora continua de procesos."
+    ],
+    printBtn: "Imprimir / Guardar PDF"
+  }
+};
+
+/* ════════════════════════════════════════
+   RENDER ENGINE
+════════════════════════════════════════ */
+let currentLang = 'pt';
+
+function setLang(lang) {
+  currentLang = lang;
+  const t = i18n[lang];
+
+  // Update html lang
+  document.documentElement.lang = lang === 'pt' ? 'pt-BR' : lang === 'en' ? 'en' : 'es';
+
+  // Update all data-i18n elements
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.getAttribute('data-i18n');
+    if (t[key]) el.textContent = t[key];
+  });
+
+  // Badges
+  document.getElementById('hero-badges').innerHTML =
+    t.badges.map(b => `<span class="badge">${b}</span>`).join('');
+
+  // Skill tags
+  ['skill1','skill2','skill3'].forEach(s => {
+    document.getElementById(`${s}-tags`).innerHTML =
+      t[`${s}_tags`].map(tag => `<span class="skill-tag">${tag}</span>`).join('');
+  });
+
+  // Timeline
+  const dotStyle = (faded) => faded
+    ? 'background:#CBD5E0; box-shadow:0 0 0 2px #CBD5E0;'
+    : '';
+  document.getElementById('timeline').innerHTML = t.jobs.map(job => `
+    <div class="timeline-item">
+      <div class="timeline-dot"><div class="dot" style="${dotStyle(job.faded)}"></div></div>
+      <div class="timeline-card">
+        <div class="timeline-company">${job.company}</div>
+        <div class="timeline-header">
+          <div class="timeline-role">${job.role}</div>
+          <span class="timeline-period">${job.period}</span>
+        </div>
+        <ul class="timeline-list">
+          ${job.items.map(item => `<li>${item}</li>`).join('')}
+        </ul>
+      </div>
+    </div>
+  `).join('');
+
+  // Education
+  const degreeIcon = `<svg viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>`;
+  const techIcon = `<svg viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>`;
+  document.getElementById('edu-grid').innerHTML = t.education.map(edu => `
+    <div class="edu-card">
+      <div class="edu-badge">${edu.icon === 'degree' ? degreeIcon : techIcon}</div>
+      <div>
+        <div class="edu-title">${edu.title}</div>
+        <div class="edu-institution">${edu.institution}</div>
+      </div>
+    </div>
+  `).join('');
+
+  // Certs
+  document.getElementById('cert-grid').innerHTML = t.certs.map(c => `
+    <div class="cert-item">
+      <div class="cert-org">${c.org}</div>
+      <div class="cert-name">${c.name}</div>
+    </div>
+  `).join('');
+
+  // Highlights
+  const checkIcon = `<svg viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>`;
+  document.getElementById('diff-grid').innerHTML = t.highlights.map(h => `
+    <div class="diff-item">
+      <div class="diff-check">${checkIcon}</div>
+      <div class="diff-text">${h}</div>
+    </div>
+  `).join('');
+
+  // Update active button states (desktop)
+  ['pt','en','es'].forEach(l => {
+    const btn = document.getElementById(`btn-${l}-desk`);
+    const btnM = document.getElementById(`btn-${l}-mob`);
+    if (btn) btn.classList.toggle('active', l === lang);
+    if (btnM) btnM.classList.toggle('active', l === lang);
+  });
+
+  // Re-observe new cards
   document.querySelectorAll('.timeline-card, .skill-card, .edu-card').forEach(el => {
+    el.classList.remove('visible');
     observer.observe(el);
   });
+}
 
-  // Active nav link on scroll
-  const sections = document.querySelectorAll('section[id]');
-  const navLinks = document.querySelectorAll('.nav-links a');
-
-  window.addEventListener('scroll', () => {
-    let current = '';
-    sections.forEach(section => {
-      if (window.scrollY >= section.offsetTop - 120) current = section.id;
-    });
-    navLinks.forEach(link => {
-      link.classList.toggle('active', link.getAttribute('href') === '#' + current);
-    });
+/* ════════════════════════════════════════
+   SCROLL REVEAL
+════════════════════════════════════════ */
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry, i) => {
+    if (entry.isIntersecting) {
+      setTimeout(() => entry.target.classList.add('visible'), i * 60);
+      observer.unobserve(entry.target);
+    }
   });
+}, { threshold: 0.08 });
+
+/* ════════════════════════════════════════
+   HAMBURGER MENU
+════════════════════════════════════════ */
+const hamburger = document.getElementById('hamburger');
+const drawer = document.getElementById('drawer');
+const overlay = document.getElementById('overlay');
+
+function toggleDrawer(open) {
+  hamburger.classList.toggle('open', open);
+  drawer.classList.toggle('open', open);
+  overlay.classList.toggle('open', open);
+  document.body.style.overflow = open ? 'hidden' : '';
+}
+
+hamburger.addEventListener('click', () => toggleDrawer(!drawer.classList.contains('open')));
+overlay.addEventListener('click', () => toggleDrawer(false));
+document.querySelectorAll('.drawer-link').forEach(link => {
+  link.addEventListener('click', () => toggleDrawer(false));
+});
+
+/* ════════════════════════════════════════
+   ACTIVE NAV ON SCROLL
+════════════════════════════════════════ */
+const sections = document.querySelectorAll('section[id]');
+window.addEventListener('scroll', () => {
+  let current = '';
+  sections.forEach(section => {
+    if (window.scrollY >= section.offsetTop - 120) current = section.id;
+  });
+  document.querySelectorAll('.nav-links a').forEach(link => {
+    link.classList.toggle('active', link.getAttribute('href') === '#' + current);
+  });
+});
+
+/* ════════════════════════════════════════
+   INIT
+════════════════════════════════════════ */
+setLang('pt');
 </script>
 
 </body>
